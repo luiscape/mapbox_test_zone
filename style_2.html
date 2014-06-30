@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>MapBox.js Testing Ground</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+<!-- load bootstrap -->
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+<!-- Load mapbox.js -->
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; 
+  	top:250px;
+  	bottom:0;
+  	width:100%;
+  }
+  #water {color: #404040;}
+</style>
+</head>
+<body>
+<div class="container">
+	<h2>Testing mapping features.</h2>
+	<p>Here we are loading the basemap tiles that were created by OCHA / ReliefWeb with appropriate world boundaries. MapBox.js allows us to style base layers locally using <a href="https://www.mapbox.com/tilemill/docs/manual/carto/">CartoCSS</a>.</p>
+  <p>Notice how this style has different elements (i.e. colors). All of these are added locally by a series of CartoCSS specifications.</p>
+	<p><a class="btn btn-lg btn-success" href="index.html" role="button">< Previous style</a></p>
+</div>
+<div id='map'></div>
+<script>
+var map = L.mapbox.map('map', 'reliefweb.1_AVMU_World')
+    .setView([40, -74.50], 9);
+</script>
+</body>
+</html>
