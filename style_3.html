@@ -25,14 +25,12 @@
 <div class="container">
 	<h2>Testing mapping features.</h2>
 	<p>Here we are loading the basemap tiles that were created by OCHA / ReliefWeb with appropriate world boundaries. MapBox.js allows us to style base layers locally using <a href="https://www.mapbox.com/tilemill/docs/manual/carto/">CartoCSS</a>.</p>
-	<p>
-    <a class="btn btn-lg btn-success" href="style_2.html" role="button">Next style ></a>
-    <a class="btn btn-lg btn-success" href="style_3.html" role="button">Yumi's style</a>
-  </p>
+  <p>Notice how this style has different elements (i.e. colors). All of these are added locally by a series of CartoCSS specifications.</p>
+	<p><a class="btn btn-lg btn-success" href="index.html" role="button">< Previous style</a></p>
 </div>
 <div id='map'></div>
 <script>
-var map = L.mapbox.map('map', 'reliefweb.1_AVMU_World')
+var map = L.mapbox.map('map', 'yumiendo.ijchbik8')
     .setView([40, -74.50], 9);
 </script>
 </body>
