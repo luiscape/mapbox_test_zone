@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>MapBox.js Testing Ground</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+<!-- load bootstrap -->
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+<!-- Load mapbox.js -->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; 
+  	top:250px;
+  	bottom:0;
+  	width:100%;
+  }
+  #water {color: #404040;}
+</style>
+</head>
+<body>
+<div class="container">
+	<h2>Leaflet Only</h2>
+	<p>Here we are only using <a href="http://leafletjs.com/">leaflet.js</a> to load tiles from MapBox's server. </p>
+	<p>
+    <a class="btn btn-lg btn-success" href="style_4.html" role="button">< Previous style</a>
+    <a class="btn btn-lg btn-success" href="index.html" role="button">Index</a>
+  </p>
+</div>
+<div id='map'></div>
+<script>
+// Replace 'examples.map-i87786ca' with your map id.
+var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v3/reliefweb.wrl_hdx/{z}/{x}/{y}.png', {
+    attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+});
+
+var map = L.map('map')
+    .addLayer(mapboxTiles)
+    .setView([42.3610, -71.0587], 15);
+</script>
+</body>
+</html>
